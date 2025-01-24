@@ -39,9 +39,9 @@ ROOM 0
 c,c,c,c,b,b,b,b,b,b,b,b,c,c,c,c
 c,c,c,b,b,0,m,0,0,0,0,b,b,c,c,c
 c,c,b,b,0,0,e,f,f,g,0,0,b,b,c,c
-c,b,b,0,0,0,0,0,0,0,0,m,0,b,b,c
-c,b,0,0,0,0,0,0,0,0,0,0,0,0,b,c
-c,b,0,m,0,0,0,0,0,0,0,0,0,0,b,c
+c,b,b,0,0,0,0,0,0,0,0,m,d,b,b,c
+c,b,0,0,0,0,0,0,0,0,0,0,0,d,b,c
+c,b,0,m,0,0,0,0,0,0,0,0,0,d,b,c
 c,b,0,0,0,0,0,m,0,0,0,0,0,0,b,c
 c,b,0,0,0,0,0,0,0,0,0,0,0,0,b,c
 c,b,d,0,0,0,0,0,0,0,0,0,0,0,b,c
@@ -102,9 +102,9 @@ NAME StorageCloset
 ITM 1 4,12
 EXT 15,14 4 0,7
 EXT 7,0 2 7,15
-EXT 8,15 5 8,0
 EXT 6,15 5 6,0
 EXT 0,13 2 7,14
+EXT 8,15 5 8,0
 PAL 2
 TUNE 1
 
@@ -131,23 +131,24 @@ PAL 2
 
 ROOM 5
 h,h,h,h,h,h,0,h,0,h,h,h,h,h,h,h
-0,0,0,0,0,i,0,i,0,i,0,0,0,0,0,0
-0,0,0,0,0,i,0,i,0,i,0,0,0,0,0,0
-0,0,0,0,0,i,0,0,0,i,0,0,0,0,0,0
-0,0,0,0,0,h,h,h,h,h,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,b,0,b,0,i,0,i,0,i,0,b,0,b,0,b
+b,0,b,0,b,i,0,i,0,i,b,0,b,0,b,0
+0,b,h,h,h,i,0,i,0,i,h,h,h,0,0,b
+b,0,i,d,0,0,0,i,0,0,0,d,i,0,b,0
+0,b,i,0,0,0,0,0,0,0,0,d,i,b,0,b
+b,0,i,0,0,0,0,0,0,0,0,0,i,0,b,0
+0,b,i,0,0,0,0,0,0,0,0,0,i,b,0,b
+b,0,i,0,0,0,0,0,0,0,0,0,i,0,b,0
+0,b,i,0,0,0,0,0,0,0,0,0,i,b,0,b
+b,d,h,h,h,h,h,h,h,h,h,h,h,0,b,0
+0,d,d,0,0,b,0,b,0,b,0,b,0,b,0,b
+b,0,b,0,b,0,b,0,b,0,b,0,b,0,b,0
+0,b,0,b,0,b,0,b,0,b,0,b,0,b,0,d
+b,0,b,0,b,0,b,0,b,0,b,0,b,0,d,d
+0,b,0,b,0,b,0,b,0,b,0,b,0,b,0,b
 NAME StorageCloset2
 EXT 6,0 3 6,15
+EXT 8,0 3 8,15
 PAL 2
 TUNE 1
 
@@ -239,6 +240,7 @@ TIL e
 01110000
 01110000
 NAME Desk1
+WAL true
 
 TIL f
 00000000
@@ -250,6 +252,7 @@ TIL f
 00000000
 00000000
 NAME Desk2
+WAL true
 
 TIL g
 00000000
@@ -261,6 +264,7 @@ TIL g
 00001110
 00001110
 NAME Desk3
+WAL true
 
 TIL h
 00000000
@@ -471,7 +475,7 @@ SPR e
 01111110
 NAME Closet
 DLG a
-POS 0 13,4
+POS 5 10,9
 
 SPR f
 00000110
@@ -523,7 +527,7 @@ SPR m
 00011000
 NAME Sign3
 DLG 8
-POS 3 0,12
+POS 3 1,12
 
 SPR n
 00011000
@@ -568,6 +572,71 @@ SPR o
 NAME Pirate3
 DLG c
 POS 3 14,9
+
+SPR p
+00000000
+01111110
+01000010
+01000010
+01001010
+01000010
+01000010
+01111110
+NAME EmptyCloset
+DLG h
+POS 5 5,9
+
+SPR q
+00000000
+01111110
+01000010
+01000010
+01001010
+01000010
+01000010
+01111110
+NAME EmptyCloset2
+DLG f
+POS 5 3,7
+
+SPR s
+00011000
+10111100
+10011000
+10111100
+01011010
+00011000
+00101000
+00101000
+NAME Pirate4
+DLG g
+POS 5 9,6
+
+SPR t
+00010000
+00110000
+01111000
+00011000
+01111000
+10011000
+10101000
+10101100
+NAME Pirate5
+DLG i
+POS 2 10,11
+
+SPR u
+00010000
+00110000
+01111000
+00011000
+01111000
+10011000
+10101000
+10101100
+NAME Pirate6
+DLG j
+POS 3 3,9
 
 ITM 0
 00000000
@@ -623,8 +692,8 @@ DLG 3
   - p1count >= 1 ?
     WE MUST DROP THE ANCHOR OR WE'RE HEADED TO DAVY JONES' LOCKER!
   - else ?
-    Cap'n! The storm outside is gettin' out of hand and our here ship is at risk of sinkin'.
-    The crew out on the deck been trying to drop the ship's anchor to keep us stable, but the mechanism seems to be all a' {wvy}jammed up!{/wvy}
+    Cap'n! We are approaching land but the storm outside is gettin' out of hand and our here ship is at risk of sinkin'.
+    The crew out on the deck been trying to drop the ship's anchor to keep us from blowin away from land, but the mechanism seems to be all a' {wvy}jammed up!{/wvy}
 }{p1count = p1count + 1}
 """
 NAME Pirate dialog
@@ -638,7 +707,7 @@ To: Storage Closet
 NAME Sign2 dialog
 
 DLG 7
-{shk}HEY{/shk}, you weren't supposed to find this room! Finish your game! :)
+{shk}HEY{/shk}, you weren't supposed to find this room! Finish your game! (Talk to the pirate by the anchor on the main deck a few times, he tends to agitate easily)
 NAME SecretSign dialog
 
 DLG 8
@@ -649,7 +718,7 @@ DLG 9
 """
 {
   - p2count < 3 ?
-    Cap'n! I can't unjam the anchor! Maybe get the crowbar from your closet to help!
+    Cap'n! I can't unjam the anchor! A tool could help us loosen it!
   - else ?
     STOP TALKING TO ME OR WE ARE {shk}COOKED{/shk}!
 }{p2count = p2count + 1}
@@ -717,6 +786,40 @@ DLG e
 }
 """
 NAME locked exit 1
+
+DLG f
+"""
+{
+  - {item "1"} == 1 ?
+    {blip "2"}The closet unlocks... Unfortunately, it is empty :(
+  - else ?
+    ... The closet is locked...
+}
+"""
+NAME EmptyCloset2 dialog
+
+DLG g
+The tools are in one of the closets! I can't remember which one since they are all locked!
+NAME Pirate4 dialog
+
+DLG h
+"""
+{
+  - {item "1"} == 1 ?
+    {blip "2"}The closet unlocks... Unfortunately, it is empty :(
+  - else ?
+    ... The closet is locked...
+}
+"""
+NAME EmptyCloset dialog
+
+DLG i
+...I've accepted my fate. We are doomed...
+NAME Pirate5 dialog
+
+DLG j
+Don't mind me, just kneeled down, lost forever in the maze that is this storage room... You didn't think this was the right path too, did you?
+NAME Pirate6 dialog
 
 VAR p3count
 0
